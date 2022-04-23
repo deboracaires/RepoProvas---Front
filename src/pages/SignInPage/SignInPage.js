@@ -2,7 +2,7 @@ import { Container, ContainerConfirm, ContainerContent, ContainerInput, Divider,
 import { AiFillEye } from "react-icons/ai";
 import { Navigate } from 'react-router';
 
-export default function SignUpPage() {
+export default function SignInPage() {
 
   const navigate = Navigate();
 
@@ -10,7 +10,7 @@ export default function SignUpPage() {
     <Container>
       <Title> Repo<span>Provas</span> </Title>
       <ContainerContent>
-        <h1> Cadastro </h1>
+        <h1> Login </h1>
         <button>ENTRAR COM O GITHUB</button>
         <Divider>
           <div></div>
@@ -28,15 +28,9 @@ export default function SignUpPage() {
           ></input>
           <div><AiFillEye size="22px" color="rgba(0, 0, 0, 0.54)"/> </div>
         </ContainerInput>
-        <ContainerInput>
-          <input
-            placeholder='Confirme a senha'
-          ></input>
-          <div><AiFillEye size="22px" color="rgba(0, 0, 0, 0.54)"/> </div>
-        </ContainerInput>
         <ContainerConfirm>
-          <div className='otherPage' onClick={() => navigate('/')}> Já possuo cadastro</div>
-          <button className='confirm'>CADASTRAR</button>
+          <div className='otherPage' onClick={() => navigate('/signup')}> Não possuo cadastro</div>
+          <button className='confirm'>Entrar</button>
         </ContainerConfirm>
       </ContainerContent>
     </Container>
